@@ -22,7 +22,7 @@ jobs:
             echo "🚀 Starting deployment..."
 
             # Navigate to project directory
-            cd /home/ubuntu/finansmart-backend
+            cd /home/ubuntu/financial-organizer-backend
 
             # Pull latest changes
             echo "📥 Pulling latest code from GitHub..."
@@ -46,7 +46,7 @@ jobs:
 
             # Restart PM2
             echo "♻️ Restarting backend..."
-            pm2 restart finansmart-backend
+            pm2 restart financial-organizer-backend
 
             # Show status
             echo "✅ Deployment complete!"
