@@ -46,7 +46,7 @@ jobs:
 
             # Restart PM2
             echo "♻️ Restarting backend..."
-            pm2 restart financial-organizer-backend
+            pm2 restart finansmart-backend
 
             # Show status
             echo "✅ Deployment complete!"
