@@ -8,6 +8,7 @@ import incomeRoutes from './routes/income.routes';
 import expenseRoutes from './routes/expense.routes';
 import { errorHandler } from './middleware/error-handler.middleware';
 import { PrismaClient } from '@prisma/client';
+import { authMiddleware } from './middleware/auth.middleware';
 
 // Cargar variables de entorno
 dotenv.config();
@@ -69,6 +70,9 @@ app.get('/health', async (req: Request, res: Response) => {
     });
   }
 });
+
+// Middleware de autenticación
+app.use('/api', authMiddleware);
 
 // Rutas de la API
 app.use('/api', budgetRoutes);
